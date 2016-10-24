@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.102-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <MenuBar fx:id="menuBar" layoutX="14.0" layoutY="14.0">
+        <menus>
+          <Menu fx:id="file" mnemonicParsing="false" text="Fitxer">
+            <items>
+                  <MenuItem fx:id="openFIle" mnemonicParsing="false" onAction="#openFile" text="Obrir fitxer" />
+              <MenuItem fx:id="closeMenu" mnemonicParsing="false" onAction="#close" text="Tancar" />
+                  <MenuItem fx:id="sf" mnemonicParsing="false" onAction="#saveFile" text="Guardar Fitxer" />
+            </items>
+          </Menu>
+          <Menu fx:id="options" mnemonicParsing="false" text="Opcions">
+            <items>
+                  <Menu mnemonicParsing="false" text="Tamany">
+                    <items>
+                        <MenuItem fx:id="s10" mnemonicParsing="false" onAction="#changeSize" text="10" />
+                        <MenuItem fx:id="s11" mnemonicParsing="false" onAction="#changeSize" text="11" />
+                      <MenuItem fx:id="s12" mnemonicParsing="false" onAction="#changeSize" text="12" />
+                        <MenuItem fx:id="s13" mnemonicParsing="false" onAction="#changeSize" text="13" />
+                        <MenuItem fx:id="s14" mnemonicParsing="false" onAction="#changeSize" text="14" />
+                        <MenuItem fx:id="s15" mnemonicParsing="false" onAction="#changeSize" text="15" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Font">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#SystemFont" text="System" />
+                        <MenuItem mnemonicParsing="false" onAction="#CantarellFont" text="Cantarell" />
+                        <MenuItem mnemonicParsing="false" onAction="#FreeMonoFont" text="FreeMono" />
+                    </items>
+                  </Menu>
+                  <MenuItem fx:id="toPast" mnemonicParsing="false" onAction="#paste" text="Enganxar" />
+                  <MenuItem fx:id="toCopy" mnemonicParsing="false" onAction="#copy" text="Copiar" />
+                  <MenuItem fx:id="toCut" mnemonicParsing="false" onAction="#cut" text="Tallar" />
+                  <MenuItem mnemonicParsing="false" onAction="#undo" text="Desfer" />
+            </items>
+          </Menu>
+            <Menu fx:id="help" mnemonicParsing="false" text="Ajuda">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#help" text="Sobre l'editor" />
+              </items>
+            </Menu>
+        </menus>
+         <contextMenu>
+            <ContextMenu>
+               <items>
+              <MenuItem mnemonicParsing="false" onAction="#paste" text="Enganxar" />
+                  <MenuItem fx:id="copyMenu" mnemonicParsing="false" onAction="#copy" text="Copiar" />
+                  <MenuItem mnemonicParsing="false" onAction="#cut" text="Tallar" />
+                  <MenuItem mnemonicParsing="false" onAction="#undo" text="Desfer" />
+               </items>
+            </ContextMenu>
+         </contextMenu>
+      </MenuBar>
+      <TextArea fx:id="txtArea" layoutX="11.0" layoutY="58.0" prefHeight="328.0" prefWidth="580.0" />
+   </children>
+</AnchorPane>
